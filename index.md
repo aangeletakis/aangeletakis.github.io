@@ -1,4 +1,0 @@
----
-layout: architect
----
-hello
