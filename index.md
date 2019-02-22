@@ -1,4 +1,4 @@
 ---
-layout: minimal
+layout: architect
 ---
 hello
