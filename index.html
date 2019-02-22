@@ -1,11 +1,9 @@
 <html>
   <head>
-    <script>var canvas=document.querySelector("canvas"),context=canvas.getContext("2d"),width=canvas.width=window.innerWidth,height=canvas.height=window.innerHeight,waves=[];const count=3,waveHeight=70;var colors=["#068587","#068587","#068587"];function init(){for(let e=0;e<count;e++)createWave(colors[e],5);setInterval(update,10)}function update(){context.fillStyle="#112F41",context.globalCompositeOperation="source-over",context.fillRect(0,0,width,height),context.globalCompositeOperation="screen";for(let e=0;e<waves.length;e++){for(let t=0;t<waves[e].nodes.length;t++)bounce(waves[e].nodes[t]);drawWave(waves[e])}}function createWave(e,t){var n=[];for(let e=0;e<=t+2;e++){var o=[(e-1)*width/t,0,200*Math.random(),.3];n.push(o)}waves.push({color:e,nodes:n})}function bounce(e){e[1]=waveHeight/3*Math.sin(e[2]/20)+height/1.4,e[2]=e[2]+e[3]}function drawWave(e){var t=function(e,t){return(t-e)/2+e};context.fillStyle=e.color,context.beginPath(),context.moveTo(0,height),context.lineTo(e.nodes[0][0],e.nodes[0][1]);for(let n=0;n<e.nodes.length;n++)e.nodes[n+1]?context.quadraticCurveTo(e.nodes[n][0],e.nodes[n][1],t(e.nodes[n][0],e.nodes[n+1][0]),t(e.nodes[n][1],e.nodes[n+1][1])):(context.lineTo(e.nodes[n][0],e.nodes[n][1]),context.lineTo(width,height));context.closePath(),context.fill()}function resizeCanvas(){width=canvas.width=window.innerWidth,height=canvas.height=window.innerHeight,update()}window.addEventListener("resize",resizeCanvas,!1),init();</script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
-    <style>canvas { display:block; position:absolute;left:0;top:0; z-index:-1;} body{font-family: 'Open Sans', sans-serif;}</style>
-    <canvas id="canvas"></canvas>
+    <style>body{font-family: 'Open Sans', sans-serif;}</style>
   </head>
   <body>
-    <div>Welcome<p>
+    <p>Hello</p>
   </body>
 </html>
